@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | CampusFind</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body>
+
+    <div class="dashboard-layout">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">CampusFind</div>
+
+            <p>Menu</p>
+
+            <ul class="nav-links">
+                <li><a href="dashboard.html" class="active">🏠 Dashboard</a></li>
+                <li><a href="browse.html">📦 Browse Items</a></li>
+                <li><a href="#quick-actions">➕ Report an Item</a></li>
+                <li><a href="#my-listings">📋 My Listings</a></li>
+            </ul>
+
+            <div class="sidebar-bottom">
+                <button class="logout-btn" id="logoutBtn">↪ Log Out</button>
+            </div>
+        </aside>
+
+        <!-- Main Dashboard -->
+        <main class="main-content">
+
+            <header class="top-bar">
+                <div>
+                    <h1>Dashboard</h1>
+                    <p>Manage your lost and found items in one place.</p>
+                </div>
+
+                <span class="user-role" id="userRole">User</span>
+            </header>
+
+            <!-- Welcome -->
+            <section class="welcome-box">
+                <h2 id="welcomeMessage">Welcome to CampusFind!</h2>
+                <p>
+                    Your campus lost and found community starts here.
+                    Report missing belongings or help someone find theirs.
+                </p>
+            </section>
+
+            <!-- Statistics -->
+            <section>
+                <h2 class="section-heading">Overview</h2>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">🔍</div>
+                        <h3 id="lostCount">0</h3>
+                        <p>Lost Items</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">📦</div>
+                        <h3 id="foundCount">0</h3>
+                        <p>Found Items</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">📋</div>
+                        <h3 id="myListingsCount">0</h3>
+                        <p>My Listings</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quick Actions -->
+            <section id="quick-actions">
+                <h2 class="section-heading">Quick Actions</h2>
+
+                <div class="actions-grid">
+                    <div class="action-card">
+                        <h3>🔍 Lost Something?</h3>
+                        <p>
+                            Report an item you have lost on campus
+                            so others can help you find it.
+                        </p>
+                        <a href="report.html?type=lost" class="action-btn">
+                            Report Lost Item
+                        </a>
+                    </div>
+
+                    <div class="action-card">
+                        <h3>📦 Found Something?</h3>
+                        <p>
+                            Found an item that belongs to someone?
+                            Report it to help return it to its owner.
+                        </p>
+                        <a href="report.html?type=found" class="action-btn">
+                            Report Found Item
+                        </a>
+                    </div>
+                </div>
+            </section>
+            
+<!-- Recent Items -->
+<section id="recent-items">
+    <h2 class="section-heading">Recently Reported Items</h2>
+
+    <div class="recent-box">
+        <div id="recentItemsContainer" class="recent-items-grid">
+            <!-- Reports will appear here -->
+        </div>
+    </div>
+</section>
+
+
+            
+<!-- My Listings -->
+<section id="my-listings" style="margin-top: 30px;">
+    <h2 class="section-heading">My Listings</h2>
+
+    <div class="recent-box">
+        <div id="myListingsContainer" class="recent-items-grid">
+            <!-- User's listings will appear here -->
+        </div>
+
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="my-listings.html" class="action-btn">
+                View All Listings
+            </a>
+        </div>
+    </div>
+</section>
+
+
+        </main>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script src="js/dashboard.js"></script>
+
+</body>
+</html>

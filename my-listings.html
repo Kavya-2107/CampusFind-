@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Listings | CampusFind</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/my-listings.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">CampusFind</a>
+
+            <nav>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="report.html">Report an Item</a>
+                <a href="browse.html">Browse Items</a>
+                <a href="my-listings.html">My Listings</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="my-listings-container">
+
+        <section class="listings-heading">
+            <h1>My Listings</h1>
+            <p>Manage the items you have reported on CampusFind.</p>
+        </section>
+
+        <div class="listings-summary">
+            <div class="summary-card">
+                <h3 id="totalCount">0</h3>
+                <p>Total Reports</p>
+            </div>
+
+            <div class="summary-card">
+                <h3 id="lostCount">0</h3>
+                <p>Lost Items</p>
+            </div>
+
+            <div class="summary-card">
+                <h3 id="foundCount">0</h3>
+                <p>Found Items</p>
+            </div>
+        </div>
+
+        <section id="myItemsContainer" class="my-items-grid">
+        </section>
+
+        <p id="noListings" style="display: none;">
+            You haven't reported any items yet.
+        </p>
+
+        <!-- Claim Management Section -->
+        <section class="claims-section">
+            <div class="listings-heading">
+                <h2>Claim Management</h2>
+                <p>Review claims submitted for your found items.</p>
+            </div>
+
+            <div id="claimsContainer">
+                <!-- Claims will appear here -->
+            </div>
+
+            <p id="noClaims" style="display: none;">
+                No claims have been submitted for your items yet.
+            </p>
+        </section>
+
+    </main>
+
+    <script src="js/auth.js"></script>
+    <script>
+        protectPage();
+    </script>
+    <script src="js/my-listings.js"></script>
+
+</body>
+</html>

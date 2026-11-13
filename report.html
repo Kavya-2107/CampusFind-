@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report an Item | CampusFind</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/report.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">CampusFind</a>
+
+            <nav>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="report.html">Report an Item</a>
+                <a href="index.html">Home</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="report-container">
+
+        <div class="report-heading">
+            <h1>Report an Item</h1>
+            <p>Help reunite lost belongings with their owners.</p>
+        </div>
+
+        <form id="reportForm" class="report-form">
+
+            <div class="form-group">
+                <label for="itemType">What do you want to report?</label>
+                <select id="itemType" required>
+                    <option value="">Select report type</option>
+                    <option value="Lost">I Lost Something</option>
+                    <option value="Found">I Found Something</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="itemName">Item Name</label>
+                <input type="text" id="itemName"
+                    placeholder="e.g. Black Wallet" required>
+            </div>
+
+            <div class="form-group">
+                <label for="category">Category</label>
+                <select id="category" required>
+                    <option value="">Select category</option>
+                    <option value="Electronics">Electronics</option>
+                    <option value="Books & Notes">Books & Notes</option>
+                    <option value="ID Cards">ID Cards</option>
+                    <option value="Bags">Bags</option>
+                    <option value="Clothing">Clothing</option>
+                    <option value="Accessories">Accessories</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea id="description" rows="4"
+                    placeholder="Describe the item and any identifying details..."
+                    required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="location">Location</label>
+                <input type="text" id="location"
+                    placeholder="Where was it lost or found?" required>
+            </div>
+
+            <div class="form-group">
+                <label for="itemDate">Date Lost / Found</label>
+                <input type="date" id="itemDate" required>
+            </div>
+
+            <div class="form-group">
+                <label for="contact">Contact Details</label>
+                <input type="text" id="contact"
+                    placeholder="Email or phone number" required>
+            </div>
+
+            <div class="form-group">
+                <label for="itemImage">Upload Item Photo (Optional)</label>
+                <input type="file" id="itemImage" accept="image/*">
+                <img id="imagePreview" alt="Selected item preview"
+                    style="display:none; max-width:200px; margin-top:12px;">
+            </div>
+
+            <button type="submit" class="btn-primary">
+                Submit Report
+            </button>
+
+            <p id="reportMessage"></p>
+
+        </form>
+    </main>
+
+    <script src="js/auth.js"></script>
+    <script>
+        protectPage();
+    </script>
+    <script src="js/report.js"></script>
+
+</body>
+</html>

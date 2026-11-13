@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Details | CampusFind</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/item-details.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">CampusFind</a>
+
+            <nav>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="browse.html">Browse Items</a>
+                <a href="my-listings.html">My Listings</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="details-container">
+
+        <a href="browse.html" class="back-link">
+            ← Back to Browse Items
+        </a>
+
+        <section id="itemDetails" class="details-card">
+            <!-- Item details will be loaded using JavaScript -->
+        </section>
+
+<!-- Claim Form -->
+<section id="claimSection" class="claim-section" style="display: none;">
+    <h2>Claim This Item</h2>
+    <p>Provide details to help verify that this item belongs to you.</p>
+
+    <form id="claimForm">
+        <label for="claimMessage">Why do you think this item belongs to you?</label>
+        <textarea
+            id="claimMessage"
+            placeholder="Describe identifying details, where you lost it, or other proof..."
+            required
+        ></textarea>
+
+        <button type="submit">Submit Claim</button>
+        <p id="claimMessageStatus"></p>
+    </form>
+</section>
+
+
+        <p id="detailsMessage" style="display:none;">
+            Item not found. It may have been deleted.
+        </p>
+
+    </main>
+
+    <script src="js/auth.js"></script>
+    <script>
+        protectPage();
+    </script>
+    <script src="js/item-details.js"></script>
+
+</body>
+</html>
